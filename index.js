@@ -1,4 +1,4 @@
-const maxDays = 30;
+const maxDays = 90;
 
 async function genReportLog(container, key, url) {
   const response = await fetch("logs/" + key + "_report.log");
@@ -112,9 +112,9 @@ function getStatusText(color) {
     : color == "success"
     ? "Fully Operational"
     : color == "failure"
-    ? "Major Outage"
+    ? "Major Disruption"
     : color == "partial"
-    ? "Partial Outage"
+    ? "Partial Disruption"
     : "Unknown";
 }
 
@@ -122,11 +122,11 @@ function getStatusDescriptiveText(color) {
   return color == "nodata"
     ? "No Data Available: Health check was not performed."
     : color == "success"
-    ? "No downtime recorded on this day."
+    ? "Unaffected on this day"
     : color == "failure"
-    ? "Major outages recorded on this day."
+    ? "Extremely disrupted on this day"
     : color == "partial"
-    ? "Partial outages recorded on this day."
+    ? "Partially disrupted on this day"
     : "Unknown";
 }
 
