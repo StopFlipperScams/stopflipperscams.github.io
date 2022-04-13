@@ -124,7 +124,7 @@ function getStatusDescriptiveText(color) {
     : color == "success"
     ? "Unaffected on this day"
     : color == "failure"
-    ? "Extremely disrupted on this day"
+    ? "Extremely disrupted on this day. Note: For websites protected by Cloudflare, this will show when the website is set to Under Attack Mode"
     : color == "partial"
     ? "Partially disrupted on this day"
     : "Unknown";
