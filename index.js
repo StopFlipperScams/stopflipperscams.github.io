@@ -110,11 +110,11 @@ function getStatusText(color) {
   return color == "nodata"
     ? "No Data Available"
     : color == "success"
-    ? "Fully Operational"
+    ? "Online"
     : color == "failure"
-    ? "Major Disruption"
+    ? "Taken Down"
     : color == "partial"
-    ? "Partial Disruption"
+    ? "Technical Issues"
     : "Unknown";
 }
 
@@ -122,9 +122,9 @@ function getStatusDescriptiveText(color) {
   return color == "nodata"
     ? "No Data Available: Health check was not performed."
     : color == "success"
-    ? "Unaffected on this day"
+    ? "This actor was online and available..."
     : color == "failure"
-    ? "Extremely disrupted on this day. Note: For websites protected by Cloudflare, this will show when the website is set to Under Attack Mode"
+    ? "This threat actor was offline..."
     : color == "partial"
     ? "Partially disrupted on this day"
     : "Unknown";
